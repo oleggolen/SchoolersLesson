@@ -1,15 +1,15 @@
 #ifndef SCHOOLERS_LESSON_HIGH_SCHOOLER_H
 #define SCHOOLERS_LESSON_HIGH_SCHOOLER_H
 #include "Schooler.h"
+#include "../Interfaces/ITotable.h"
+#include "../Interfaces/ISmokable.h"
 
-
-class HighSchooler : public Schooler{
+class HighSchooler : public Schooler, public ITotable, public ISmokable{
 public:
-    char* Study() const noexcept override;
-    char* GetSchoolerType() const noexcept override;
-    char* Smoke() const noexcept override;
-    char* Tote() const noexcept override;
-    char* Play() const noexcept override;
+    const char* Study() const noexcept override;
+    const char* GetSchoolerType() const noexcept override;
+    const char* Smoke() const noexcept override;
+    const char* Tote() const noexcept override;
 
 };
 
